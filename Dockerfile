@@ -13,7 +13,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY --from=builder /docker_osd_ws4/dist/docker_osd_ws4 /usr/share/nginx/html
+COPY --from=builder /docker_osd_ws4/dist /usr/share/nginx/html
 
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
